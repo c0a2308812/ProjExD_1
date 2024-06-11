@@ -18,7 +18,9 @@ def main():
             if event.type == pg.QUIT: return
 
         screen.blit(bg_img, [0, 0])
-        screen.blit(kk_img, [300, 200])
+        kk_rct = kk_img.get_rect()
+        kk_rct.center = 300, 200
+        screen.blit(kk_img, kk_rct)
         pg.display.update()
         tmr += 1        
         clock.tick(10)
